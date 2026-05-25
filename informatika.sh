@@ -28,7 +28,37 @@ read -p " [INFO-TOOL]> Pilih: " pilih
 case $pilih in
   1) clear; echo "PYTHON DASAR" | lolcat; python -c "print('Halo Dunia'); a=5; b=3; print(f'5 + 3 = {a+b}')"; read -p "Enter..." ;;
   2) clear; echo "ROADMAP WEB DEV" | lolcat; echo "1. HTML > 2. CSS > 3. JS > 4. PHP > 5. MySQL"; read -p "Enter..." ;;
-  3) clear; echo "PERINTAH WAJIB" | lolcat; echo "ls cd pwd cp mv rm mkdir nano cat grep ping"; read -p "Enter..." ;;
+  3)clear; 
+   echo "PERINTAH WAJIB LINUX + KALI LINUX" | lolcat
+   echo ""
+   # Logo Kali Linux ASCII
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣤⣤⣤⣤⣄' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠛⠉⠙⠛⠛⠻⢿⣿⣦⣀' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡿⠋⠀⠀⠀⠀⠀⡀⠀⠀⠀⠈⢻⣿⣷⣄' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⠟⠀⠀⠀⣠⣶⣿⣿⣿⣿⣶⣄⠀⠀⠹⣿⣷⡀' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⡏⠀⠀⠀⢰⣿⣿⠋⠉⠙⢿⣿⡆⠀⠀⢻⣿⣷' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⠁⠀⠀⠀⠈⠛⠛⠀⣿⣿⠀⠛⠛⠁⠀⠀⠈⣿⣿⡇' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⢸⣿⣧' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣇⠀⠀⠀⠀⠀⠀⢸⣿⣿' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⢀⣿⣿⡀⠀⠀⠀⠀⠀⢸⣿⣿' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣇⠀⠀⠀⠀⠀⠀⢸⣿⡿⢿⣿⡇⠀⠀⠀⠀⠀⣸⣿⡟' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣆⠀⠀⠀⠀⠀⠈⠉⠀⠀⠉⠁⠀⠀⠀⠀⣰⣿⡟⠁' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⡟⠁' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⣿⣦⣄⠀⠀⠀⠀⠀⠀⠀⣠⣴⣿⡿⠋' | lolcat
+   echo '⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠿⣿⣷⣶⣶⣶⣶⣿⡿⠟⠋' | lolcat
+   echo ""
+   echo "1. ls      > Lihat isi folder" | lolcat
+   echo "2. cd      > Pindah folder. Contoh: cd /sdcard" | lolcat  
+   echo "3. pwd     > Liat posisi folder lu sekarang" | lolcat
+   echo "4. mkdir   > Bikin folder baru" | lolcat
+   echo "5. nano    > Edit file" | lolcat
+   echo "6. nmap    > Scan port. Contoh: nmap localhost" | lolcat
+   echo "7. cat     > Baca isi file" | lolcat
+   echo "8. grep    > Cari kata di file" | lolcat
+   echo "9. ping    > Cek koneksi" | lolcat
+   echo "10. rm     > Hapus file. HATI-HATI" | lolcat
+   echo ""
+   read -p "Enter buat balik ke menu..." ;;
   4) clear; read -p "Domain/IP: " d; ping -c 3 $d; read -p "Enter..." ;;
   5) clear; curl -s ipinfo.io | grep -E 'ip|city|country'; read -p "Enter..." ;;
   6) clear; echo "Scan localhost:" | lolcat; nmap -F localhost; read -p "Enter..." ;;
