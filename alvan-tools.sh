@@ -106,12 +106,7 @@ echo -e "${Y}4. JavaScript:${W} console.log(\"Hello World\")"
 echo -e "${Y}5. HTML:${W} <h1>Hello World</h1>"
 echo -e "${C}--------------- TIPS NGODING ----------------${W}"
 echo -e "${G}Variabel Bash:${W} nama=\"Alvan\""
-echo -e "${G}If Bash:${W} if [ \$nama == \"Alvan\" ]; then echo \"GG\"; fi"
-echo -e "${G}Loop Bash:${W} for i in {1..5}; do echo \$i; done"
-echo -e "${G}Fungsi Bash:${W} function gas(){ echo \"Letsgo\"; }"
-echo -e "${C}==============================================${W}"
-echo -e "${R}Install bahasa: pkg install python php nodejs${W}"
-read -p "Pencet Enter buat balik menu..." back
+
 }
 
 while true; do
