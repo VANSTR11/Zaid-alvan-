@@ -90,7 +90,7 @@ lacak_lokasi() {
     
     case $metode in
         1)
-            if! command -v termux-location &> /dev/null; then
+            if ! command -v termux-location &> /dev/null; then
                 echo -e "${R}[!] Install dulu: pkg install termux-api${P}"
                 echo -e "${R}[!] + Install Termux:API di Play Store${P}"
                 sleep 3
