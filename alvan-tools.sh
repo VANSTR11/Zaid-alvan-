@@ -43,22 +43,22 @@ cat << "NAGA"
 /__.-|_|--|_|
 NAGA
 echo -e "${W}"
-echo -e "${G}====== TERMINAL LINUX - HACK LINUX ======${W}"
-echo -e "${Y}1.${W} pwd       : lacak posisi pakai no hp"
-echo -e "${Y}2.${W} ls -la    : Lihat semua file + data target"
-echo -e "${Y}3.${W} cd        : Pindah direktori. Ex: cd /sdcard"
-echo -e "${Y}4.${W} mkdir     : Bikin folder baru. Ex: mkdir alvan"
-echo -e "${Y}5.${W} rm -rf    : Hapus file/folder. Hati-hati!"
-echo -e "${Y}6.${W} cp        : Copy file. Ex: cp file.txt /sdcard"
-echo -e "${Y}7.${W} mv        : Pindah/ganti nama file"
-echo -e "${Y}8.${W} cat       : Baca isi file. Ex: cat file.txt"
-echo -e "${Y}9.${W} nano      : Edit file di terminal"
-echo -e "${Y}10.${W} pkg      : Install paket Termux. Ex: pkg install python"
-echo -e "${Y}11.${W} chmod +x : Kasih izin eksekusi ke file"
-echo -e "${Y}12.${W} top      : Liat proses yang jalan"
+echo -e "${G}====== ALVAN HACK LINUX - HACK LINUX ======${W}"
+echo -e "${Y}1.${W} 1       : lacak posisi pakai no hp"
+echo -e "${Y}2.${W} 2    : Lihat semua file + data target"
+echo -e "${Y}3.${W} 3        : bobol Facebook"
+echo -e "${Y}4.${W} 4     : hack wa"
+echo -e "${Y}5.${W} 5    : spam wa"
+echo -e "${Y}6.${W} 6        : terminal app"
+echo -e "${Y}7.${W} 7        : file Walawe"
+echo -e "${Y}8.${W} 8       : camera on tasgr"
+echo -e "${Y}9.${W} 9      : keaman cyber"
+echo -e "${Y}10.${W} 10      : op dana grt"
+echo -e "${Y}11.${W} 11 : stm riset wtyou"
+echo -e "${Y}12.${W} notif     : jangan di salah gunakan untuk candaan aja ya bro"
 echo -e "${C}=============================================${W}"
-echo -e "${G}Tips: Ketik \"bash\" buat masuk shell interaktif${W}"
-read -p "Pencet Enter buat balik menu..." back
+echo -e "${G} notif: jangan di salah gunakan ya bro${W}"
+read -p "Pilih salah satu..." back
 }
 
 andax_mode() {
