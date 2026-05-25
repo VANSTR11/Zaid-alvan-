@@ -106,7 +106,7 @@ echo -e "${Y}4. JavaScript:${W} console.log(\"Hello World\")"
 echo -e "${Y}5. HTML:${W} <h1>Hello World</h1>"
 echo -e "${C}--------------- TIPS NGODING ----------------${W}"
 echo -e "${G}Variabel Bash:${W} nama=\"Alvan\""
-
+read -p "Pencet Enter buat balik menu..." back
 }
 
 while true; do
