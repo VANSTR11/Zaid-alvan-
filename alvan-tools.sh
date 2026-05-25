@@ -9,25 +9,6 @@ P='\033[1;35m'
 C='\033[1;36m'
 W='\033[0m'
 
-ketik() {
-    text="$1"
-    speed=${2:-0.02}
-    for ((i=0; i<${#text}; i++)); do
-        echo -n "${text:$i:1}"
-        sleep $speed
-    done
-    echo
-}
-
-loading() {
-    echo -n "$1"
-    for i in {1..3}; do
-        echo -n "."
-        sleep 0.5
-    done
-    echo
-}
-
 banner() {
 clear
 echo -e "${R}"
@@ -106,27 +87,20 @@ echo -e "${Y}4. JavaScript:${W} console.log(\"Hello World\")"
 echo -e "${Y}5. HTML:${W} <h1>Hello World</h1>"
 echo -e "${C}--------------- TIPS NGODING ----------------${W}"
 echo -e "${G}Variabel Bash:${W} nama=\"Alvan\""
+echo -e "${G}If Bash:${W} if [ \$nama == \"Alvan\" ]; then echo \"GG\"; fi"
+echo -e "${G}Loop Bash:${W} for i in {1..5}; do echo \$i; done"
+echo -e "${G}Fungsi Bash:${W} function gas(){ echo \"Letsgo\"; }"
+echo -e "${C}==============================================${W}"
+echo -e "${R}Install bahasa: pkg install python php nodejs${W}"
 read -p "Pencet Enter buat balik menu..." back
 }
 
 while true; do
 menu
 case $pilih in
-  1) 
-    clear
-    ketik "${R}Memulai Program..." 0.05
-    loading "Loading NAGA"
-    sleep 1
-    ketik "${G}███╗   ██╗ █████╗  ██████╗  █████╗ ${W}"0.005
-    ketik "${G}████╗  ██║██╔══██╗██╔════╝ ██╔══██╗${W}"0.005
-    ketik "${G}██╔██╗ ██║███████║██║  ███╗███████║${W}"0.005
-    ketik "${R}>>> SCRIPT BY ALVAN TOOLS <<<${W}" 0.05
-    sleep 1
-    ketik "${Y}Tekan Enter untuk lanjut..." 0.03
-    read
-    ;;
+  1) linux_mode ;;
   2) andax_mode ;;
-  0) clear; ketik "${G}Thanks udah pake ALVAN TOOLS 🐉${W}" 0.03; exit 0 ;;
-  *) ketik "${R}Pilihan ga ada bro${W}" 0.03; sleep 1 ;;
+  0) clear; echo -e "${G}Thanks udah pake ALVAN TOOLS 🐉${W}"; exit 0 ;;
+  *) echo -e "${R}Pilihan ga ada bro${W}"; sleep 1 ;;
 esac
 done
