@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# Auto install
+# Auto install - UDAH DIBENERIN SPASINYA
 if! command -v lolcat &> /dev/null; then
     echo "Install tools informatika..."
     pkg update -y && pkg install figlet ruby python nmap -y > /dev/null 2>&1
@@ -11,7 +11,7 @@ while true; do
 clear
 echo "[*] [*] [*] [*] [*] [*] [*] [*] [*] [*]" | lolcat
 figlet -f big "INFO-TOOL" | lolcat
-echo "[*] [*] [*] [*] [*] [*] [*] [*] [*] [*] [*] [*] [*] [*]" | lolcat
+echo "[*] [*] [*] [*] [*] [*] [*] [*]" | lolcat
 echo " [+] Bidang : Teknik Informatika v2.3" | lolcat
 echo " [+] Github : github.com/VANSTR11/Zaid-alvan-"
 echo " [+] Coded By : Zaid Alvan - Santri IT" | lolcat
