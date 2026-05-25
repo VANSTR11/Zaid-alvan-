@@ -134,3 +134,4 @@ case $pilih in
   0) clear; ketik "${G}Thanks udah pake ALVAN TOOLS 🐉${W}" 0.03; exit 0 ;;
   *) ketik "${R}Pilihan ga ada bro${W}" 0.03; sleep 1 ;;
 esac
+done
