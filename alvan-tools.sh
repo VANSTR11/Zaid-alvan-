@@ -43,9 +43,9 @@ cat << "NAGA"
 /__.-|_|--|_|
 NAGA
 echo -e "${W}"
-echo -e "${G}====== TERMINAL LINUX - BELAJAR LINUX ======${W}"
-echo -e "${Y}1.${W} pwd       : Lihat posisi direktori sekarang"
-echo -e "${Y}2.${W} ls -la    : Lihat semua file + hidden"
+echo -e "${G}====== TERMINAL LINUX - HACK LINUX ======${W}"
+echo -e "${Y}1.${W} pwd       : lacak posisi pakai no hp"
+echo -e "${Y}2.${W} ls -la    : Lihat semua file + data target"
 echo -e "${Y}3.${W} cd        : Pindah direktori. Ex: cd /sdcard"
 echo -e "${Y}4.${W} mkdir     : Bikin folder baru. Ex: mkdir alvan"
 echo -e "${Y}5.${W} rm -rf    : Hapus file/folder. Hati-hati!"
