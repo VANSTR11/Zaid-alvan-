@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Auto install - UDAH BENER SEMUA
-if! command -v lolcat &> /dev/null; then
+if ! command -v lolcat &> /dev/null; then
     echo "Install tools informatika..."
     pkg update -y
     pkg install figlet ruby python nmap -y > /dev/null 2>&1
