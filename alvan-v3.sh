@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# ALVAN TOOLS V3 - MATRIX EDITION NO LOLCAT
+# ALVAN TOOLS V3 - MATRIX + LOKASI BY ZAID ALVAN
 M='\033[1;35m' # Magenta
 H='\033[1;32m' # Hijau
 K='\033[1;33m' # Kuning
@@ -30,7 +30,7 @@ echo -e "${R}"
 figlet -f slant "ALVAN"
 toilet -f term "NAGA V3" -F gay
 echo -e "${C}====== ALVAN TERMINAL TOOLS MATRIX ======${P}"
-echo -e "${K}Coder: Zaid Alvan | Versi: 3.0 HACKER${P}"
+echo -e "${K}Coder: Zaid Alvan | Versi: 3.1 GPS${P}"
 echo -e "${M}===========================================${P}"
 }
 
@@ -79,12 +79,59 @@ spam_gabut() {
     read -p "Kelarr. Pencet Enter..." x
 }
 
+# MENU 5 BARU: LACAK LOKASI
+lacak_lokasi() {
+    clear
+    banner
+    echo -e "${H}[1]${P} Lacak via GPS - Akurat"
+    echo -e "${H}[2]${P} Lacak via IP - Cepat"
+    echo -e "${H}[0]${P} Kembali"
+    read -p "Pilih metode: " metode
+    
+    case $metode in
+        1)
+            if! command -v termux-location &> /dev/null; then
+                echo -e "${R}[!] Install dulu: pkg install termux-api${P}"
+                echo -e "${R}[!] + Install Termux:API di Play Store${P}"
+                sleep 3
+                return
+            fi
+            ketik "${H}[+] Nyalain GPS dulu bro... Cari lokasi...${P}" 0.02
+            lokasi=$(termux-location)
+            if [ -z "$lokasi" ]; then
+                echo -e "${R}[!] Gagal! Pastikan GPS nyala + izin dikasih${P}"
+            else
+                lat=$(echo $lokasi | grep -o '"latitude":[^,]*' | cut -d: -f2)
+                lon=$(echo $lokasi | grep -o '"longitude":[^,]*' | cut -d: -f2)
+                akurasi=$(echo $lokasi | grep -o '"accuracy":[^,]*' | cut -d: -f2)
+                echo -e "${M}=========== LOKASI GPS ===========${P}"
+                echo -e "${B}Latitude :${P} ${H}$lat${P}"
+                echo -e "${B}Longitude :${P} ${H}$lon${P}"
+                echo -e "${B}Akurasi :${P} ${H}$akurasi meter${P}"
+                echo -e "${B}Maps :${P} ${H}https://google.com/maps?q=$lat,$lon${P}"
+                read -p "Buka di Maps? [y/n]: " buka
+                [ "$buka" == "y" ] && termux-open-url "https://www.google.com/maps/search/?api=1&query=$lat,$lon"
+            fi
+            ;;
+        2)
+            ketik "${H}[+] Lacak via IP...${P}" 0.02
+            data=$(curl -s ipinfo.io)
+            echo -e "${M}=========== LOKASI IP ===========${P}"
+            echo "$data" | grep -E 'city|region|country|loc|org' | sed 's/"//g; s/,//g; s/^ *//'
+            ;;
+        0) ;;
+        *) ketik "${R}Pilihan salah${P}" 0.02; sleep 1 ;;
+    esac
+    read -p "Pencet Enter buat balik..." x
+}
+
 while true; do
     banner
     echo -e "${H}[1]${P} Info HP & Jaringan"
     echo -e "${H}[2]${P} Tools Jaringan + Matrix"
     echo -e "${H}[3]${P} Spam Text Gabut"
     echo -e "${H}[4]${P} Install Package Penting"
+    echo -e "${H}[5]${P} Lacak Lokasi GPS/IP"
     echo -e "${H}[0]${P} Keluar Tools"
     echo -e "${M}======================================${P}"
     read -p "Pilih menu naga: " menu
@@ -100,16 +147,17 @@ while true; do
            ketik "${H}Semua udah keinstall bro!${P}" 0.02
            sleep 2
            ;;
+        5) lacak_lokasi ;;
         0)
            clear
            timeout 2 cmatrix -s -C red
            clear
            ketik "${R}EXITING ALVAN TOOLS V3...${P}" 0.03
-           ketik "${R}Salam NAGA MATRIX!!!${P}" 0.05
+           ketik "${R}Salam NAGA TRACKER!!!${P}" 0.05
            exit 0
            ;;
         *)
-           ketik "${R}Menu ga ada bro, pilih 0-4 aja${P}" 0.02
+           ketik "${R}Menu ga ada bro, pilih 0-5 aja${P}" 0.02
            sleep 1
            ;;
     esac
