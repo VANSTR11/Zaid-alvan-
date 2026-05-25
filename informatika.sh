@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 # Auto install - SEKARANG CEK NMAP JUGA
-if! command -v lolcat &> /dev/null ||! command -v nmap &> /dev/null ||! command -v figlet &> /dev/null; then
+if ! command -v lolcat &> /dev/null ||! command -v nmap &> /dev/null ||! command -v figlet &> /dev/null; then
     echo "Install tools yang belum ada..."
     pkg update -y
     pkg install figlet ruby python nmap curl -y > /dev/null 2>&1
