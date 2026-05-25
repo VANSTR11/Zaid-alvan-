@@ -79,7 +79,7 @@ cat << "SKULL"
     `--------`
 SKULL
 echo -e "${W}"
-echo -e "${R}====== TERMINAL ANDAX - BELAJAR CODING ======${W}"
+echo -e "${R}====== ALVAN TERMINAL ANDAX - BELAJAR CODING ======${W}"
 echo -e "${Y}1. Bash:${W} echo \"Hello World\""
 echo -e "${Y}2. Python:${W} print(\"Hello World\")"
 echo -e "${Y}3. PHP:${W} <?php echo \"Hello World\"; ?>"
